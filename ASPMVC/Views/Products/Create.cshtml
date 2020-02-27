@@ -1,0 +1,64 @@
+﻿@model WMS_ASP_MVC.Models.Product
+
+<br />
+
+<h2 class="text-info">Add new Product</h2>
+<br />
+
+<div class="border container" style="padding:30px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ProductName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="ProductName" class="form-control" />
+            </div>
+            <span asp-validation-for="ProductName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="ProductId"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="ProductId" class="form-control" />
+            </div>
+            <span asp-validation-for="ProductId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="warehouseName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="warehouseName" class="form-control" />
+            </div>
+            <span asp-validation-for="warehouseName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Quantity"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Quantity" class="form-control" />
+            </div>
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-action="Index" class="btn btn-success form-control">Back To list</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

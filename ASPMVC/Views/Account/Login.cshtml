@@ -1,0 +1,34 @@
+﻿@model WMS_ASP_MVC.Models.AppUser
+
+<br />
+
+<h2 class="text-info">Login</h2>
+<p style="color:red">@ViewBag.Result</p>
+<br />
+<div>
+    <form  name="forms" method="post">
+        <div class="form-group row">
+            <div class="col-3">
+                <label>User Name</label>
+            </div>
+            <div class="col-6">
+                <input name="usr" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label>Password</label>
+            </div>
+            <div class="col-6">
+                <input type="password" name="pwd" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Login" class="btn btn-primary form-control" />
+            </div>
+        </div>
+        </form>
+</div>
